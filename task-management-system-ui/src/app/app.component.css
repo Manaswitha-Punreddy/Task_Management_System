@@ -1,0 +1,32 @@
+.navBar {
+  background: #0277BD;
+  height: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#heading {
+  color: white;
+  line-height: 12px;
+  font-size: 30px;
+  text-align: center;
+}
+.btn {
+  background-color: #42b883;
+  border: none;
+  color: white;
+  display:block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  float: right;
+  margin-right: 30px;
+}
+
+#taskHeading {
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+

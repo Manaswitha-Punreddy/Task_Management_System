@@ -1,0 +1,98 @@
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.task {
+  padding: 10px;
+  width: 95%;
+  height: 90%;
+  border: 2px dashed rgba(236, 198, 48, 0.5);
+}
+
+.actions{
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+#edit, #complete, #delete {
+  border-style: none;
+  background: #fdfcfa;
+  font-size: 28px;
+}
+
+#edit {
+  color: #f3c623;
+}
+
+#complete {
+  color: #42b883;
+}
+
+#delete {
+  color: #c93838;
+}
+
+.taskHeader {
+  border: 2px dashed rgba(236, 198, 48, 0.5);
+  padding-left: 10px;
+  display: flex;
+}
+
+.detail {
+  font-weight: normal;
+}
+
+#successToaster, #failureToaster {
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#successToaster {
+  background-color: #42b883;
+}
+
+#failureToaster {
+  background-color: #c93838;
+}
+
+#successClose {
+  color: white;
+  background-color: #42b883;
+  border-style: none;
+  float: right;
+  font-size: 16px;
+}
+
+#failureClose {
+  color: white;
+  background-color: #c93838;
+  border-style: none;
+  float: right;
+  font-size: 16px;
+}
+
+#completed {
+  color: #42b883;
+}
+
+#inProgress {
+  color: #0277BD;
+}

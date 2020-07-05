@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="task" *ngFor="let task of tasks">
+  <div class="taskHeader">
+    <h2>Task {{task.id}}</h2>
+    <div class="actions">
+      <button id="edit" (click)="edit(task.id)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <button id="complete" (click)="complete(task.id)"><i class="fa fa-check" aria-hidden="true"></i></button>
+      <button id="delete" (click)="delete(task.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="taskBody">
+    <h3>Name: <b class="detail">{{task.name}}</b></h3>
+    <h3>Description: <b class="detail">{{task.description}}</b></h3>
+    <h3>Category: <b class="detail">{{task.category}}</b></h3>
+    <h3 *ngIf="task.completed" id="completed">Status: <b class="detail">Completed</b></h3>
+    <h3 *ngIf="!task.completed" id="inProgress">Status: <b class="detail">In Progress</b></h3>
+  </div>
+  </div>
+</div>
+<app-task-form [show]="isEdit" [taskId]="taskId" (newTaskEmitter)="updateTask(isEdit)"></app-task-form>
+<div id="successToaster" *ngIf="showSuccessMessage">{{message}}<button id="successClose"><i class="fa fa-times fa-1x" aria-hidden="true" (click)="successClose()"></i></button></div>
+<div id="failureToaster" *ngIf="showFailureMessage">{{message}}<button id="failureClose"><i class="fa fa-times fa-1x" aria-hidden="true" (click)="failureClose()"></i></button></div>

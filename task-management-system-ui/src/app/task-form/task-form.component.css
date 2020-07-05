@@ -1,0 +1,104 @@
+#name, #description, #category {
+  margin-left: 5px;
+  width: 70%;
+  border-radius: 4px;
+  border-style: solid;
+  font-size: 18px;
+}
+
+#name {
+  height: 27px;
+}
+
+#description {
+  height: 120px;
+}
+
+#category {
+  height: 32px;
+}
+
+.buttons {
+  float: right;
+}
+#create, #cancel {
+  float: left;
+  color: #fdfcfa;
+  border: none;
+  height: 35px;
+  width: 115px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+#cancel {
+  padding-left: 5px;
+  background: #c93838;
+  margin-left: 10px;
+}
+
+#create{
+  background: #42b883;
+}
+
+#nameLabel, #descLabel, #categoryLabel {
+  display: inline-block;
+  text-align: right;
+  width: 150px;
+  font-size: 20px;
+}
+
+#descLabel {
+  vertical-align: top;
+}
+
+#successToaster, #failureToaster {
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#successToaster {
+  background-color: #42b883;
+}
+
+#failureToaster {
+  background-color: #c93838;
+}
+
+#successClose {
+  color: white;
+  background-color: #42b883;
+  border-style: none;
+  float: right;
+  font-size: 16px;
+}
+
+#failureClose {
+  color: white;
+  background-color: #c93838;
+  border-style: none;
+  float: right;
+  font-size: 16px;
+}
+
+.taskForm {
+  position: absolute;
+  border: 0.1rem solid #757575;
+  border-radius: 4px;
+  left: 300px;
+  top: 200px;
+  z-index: 1;
+  padding: 30px;
+  background: #fdfcfa;
+  height: 300px;
+  width: 750px;
+}

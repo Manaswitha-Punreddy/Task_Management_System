@@ -1,0 +1,8 @@
+<div class="navBar">
+  <h2 id="heading">Task Management System</h2>
+</div>
+<br><br><br><br>
+<button class="btn btn-default" (click)="showPopup()"><i class="fa fa-plus fa-2x"></i></button>
+<app-task-form [show]="show" (newTaskEmitter)="setNewTask(newTask)"></app-task-form>
+<h1 id="taskHeading">List of tasks</h1>
+<app-tasks [newTask]="newTask"></app-tasks>

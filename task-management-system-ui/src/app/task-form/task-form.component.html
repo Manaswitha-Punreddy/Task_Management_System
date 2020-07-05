@@ -1,0 +1,28 @@
+<div class="taskForm" *ngIf="show">
+<form [formGroup]="taskFormGroup">
+  <br>
+  <div class="form-group">
+    <label for="name" id="nameLabel">Name</label>
+    <input type="text" id="name" formControlName="name" required>
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="description" id="descLabel">Description</label>
+    <textarea id="description" formControlName="description" required="required"></textarea>
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="category" id="categoryLabel">Category</label>
+    <select id="category" formControlName="category">
+      <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+    </select>
+  </div>
+  <br>
+  <div class="buttons">
+    <button id="create" (click)="createOrUpdate()">{{buttonText}}</button>
+    <button id="cancel" (click)="cancel()">Cancel</button>
+  </div>
+</form>
+<div id="successToaster" *ngIf="showSuccessMessage">{{message}}<button id="successClose"><i class="fa fa-times fa-1x" aria-hidden="true" (click)="successClose()"></i></button></div>
+<div id="failureToaster" *ngIf="showFailureMessage">{{message}}<button id="failureClose"><i class="fa fa-times fa-1x" aria-hidden="true" (click)="failureClose()"></i></button></div>
+</div>
