@@ -12,6 +12,8 @@ After cloning or downloading the project, run the following commands:
 ```
 cd task-management-system-ui
 npm install
+cd task-management-system-api
+mvn spring-boot:run
 ```
 
 ## Technology Stack
